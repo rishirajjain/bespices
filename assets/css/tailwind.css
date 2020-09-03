@@ -1,0 +1,87 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {
+  @apply font-body;
+  -webkit-tap-highlight-color: transparent;
+}
+button:focus {
+  @apply outline-none;
+}
+.theme-black {
+  --bg-background-pri: #000a12;
+  --bg-background-sec: #3e4c52;
+  --bg-background-ter: #263238;
+  --bg-card: #000a12;
+  --bg-card-light: #013158;
+  --txt-pri: white;
+  --txt-sec: rgb(240, 240, 240);
+}
+
+.theme-light {
+  --bg-background-pri: #c9ffc7;
+  --bg-background-sec: #d6d6d6;
+  --bg-background-ter: #f3f3f3;
+
+  --bg-card-light: #ffffff;
+  --bg-card: #000a12;
+  --txt-pri: black;
+  --txt-sec: rgb(27, 27, 27);
+}
+.cardEffLight {
+  box-shadow: 7px 7px 14px #a9d6a7, -7px -7px 14px #e9ffe7;
+}
+
+.cardEffDark {
+  box-shadow: 6px 6px 12px #000407, -6px -6px 12px #00101d;
+}
+
+.name {
+  color: #ff4081;
+}
+.illustration {
+  width: 25%;
+  align-self: flex-start;
+}
+.btncol {
+  background-color: #5400ff;
+}
+.btncol:hover {
+  background-color: #4301c7;
+}
+/* button styles for content on work pages */
+.btn {
+  @apply text-white px-8 bg-gray-800 py-2 shadow rounded-full;
+}
+.btn:focus {
+  @apply shadow-outline;
+  @apply outline-none;
+}
+.btn:hover {
+  @apply shadow-outline;
+}
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.1s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+
+.tooltip .tooltip-text {
+  top: 2rem;
+  @apply invisible px-4 absolute z-50 inline-block mr-4 right-0 text-xs rounded-lg bg-gray-700 text-white;
+}
+
+.tooltip:hover .tooltip-text {
+  @apply visible;
+}
+
+.content-wrapper {
+  transition: background-color 0.25s;
+}
+ol {
+  margin-left: 1rem;
+}
